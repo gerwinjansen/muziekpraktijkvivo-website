@@ -42,5 +42,13 @@
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ]
+  },
+  "archive": {
+    "name": "muziekpraktijkvivo",
+    "exclude": [
+      ".env",
+      ".git*",
+      "composer.*"
+    ]
   }
 }
