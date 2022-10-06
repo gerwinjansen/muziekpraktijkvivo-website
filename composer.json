@@ -48,7 +48,9 @@
     "exclude": [
       ".env",
       ".git*",
-      "composer.*"
+      "*.md",
+      "composer.*",
+      "dist"
     ]
   }
 }

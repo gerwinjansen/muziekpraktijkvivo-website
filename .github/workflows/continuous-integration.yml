@@ -1,0 +1,21 @@
+name: Continuous Integration
+run-name: Build ${{ github.ref }}
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+      - name: Package
+        uses: php-actions/composer@v6
+        with:
+          command: archive
+          args: --format tar.gz --dir dist/ --file muziekpraktijkvivo
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: muziekpraktijkvivo
+          path: dist/muziekpraktijkvivo.tar.gz

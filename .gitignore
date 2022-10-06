@@ -24,3 +24,6 @@ public_html/core
 
 # WP-CLI
 wp-cli.local.yml
+
+#build output
+dist
