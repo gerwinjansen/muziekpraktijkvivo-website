@@ -7,13 +7,13 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Install dependencies
-        uses: php-actions/composer@v6
-      - name: Package
-        uses: php-actions/composer@v6
+      - name: Setup PHP with composer
+        uses: shivammathur/setup-php@v2
         with:
-          command: archive
-          args: --format tar.gz --dir dist/ --file muziekpraktijkvivo
+          php-version: '8.1'
+          tools: composer:v2
+      - run: composer install
+      - run: composer archive --format tar.gz --dir dist/ --file muziekpraktijkvivo
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
