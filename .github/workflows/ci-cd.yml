@@ -1,0 +1,48 @@
+name: CI/CD
+run-name: CI/CD ${{ github.ref }}
+on: push
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup PHP with composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          tools: composer:v2
+
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: composer install
+
+      - name: Cache webroot
+        uses: actions/cache@v3
+        with:
+          key: webroot-${{ github.run_number }}.${{ github.run_attempt }}
+          path: |
+            config
+            public_html
+            vendor
+            .env.example
+            wp-cli.yml
+
+  continuous-deployment:
+    needs: continuous-integration
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Take webroot from cache
+        uses: actions/cache@v3
+        with:
+          key: webroot-${{ github.run_number }}.${{ github.run_attempt }}
+          path: |
+            config
+            public_html
+            vendor
+            .env.example
+            wp-cli.yml
+      
+      - name: Deploy on hosting provider
+        run: rsync --version
