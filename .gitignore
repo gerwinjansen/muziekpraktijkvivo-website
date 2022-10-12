@@ -1,15 +1,12 @@
+public_html/core
 public_html/mu-plugins/*
 !public_html/mu-plugins/bedrock-autoloader.php
-public_html/plugins/*
-!public_html/plugins/.gitkeep
-public_html/themes/*
-!public_html/themes/.gitkeep
-public_html/uploads/*
-!public_html/uploads/.gitkeep
+public_html/plugins
+public_html/themes
 public_html/languages
+public_html/uploads
 public_html/upgrade
 public_html/cache
-public_html/core
 
 # Logs
 *.log
