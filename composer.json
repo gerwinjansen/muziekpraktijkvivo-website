@@ -1,6 +1,6 @@
 {
   "$schema": "https://getcomposer.org/schema.json",
-  "name": "gerwinjansen/muziekpraktijkvivo",
+  "name": "gerwinjansen/muziekpraktijkvivo-website",
   "description": "The boilerplate for the Muziekpraktijk Vivo website",
   "license": "proprietary",
   "repositories": [
@@ -8,49 +8,54 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io",
+      "only": ["koodimonni-language/*", "koodimonni-plugin-language/*", "koodimonni-theme-language/*"]
     }
   ],
   "require": {
     "php": ">=7.4",
-    "composer/installers": "^2.2",
-    "vlucas/phpdotenv": "^5.4",
-    "oscarotero/env": "^2.1",
-    "roots/bedrock-autoloader": "^1.0",
-    "roots/wordpress": "6.0.2",
+    "composer/installers": "2.2.0",
+    "vlucas/phpdotenv": "5.5.0",
+    "oscarotero/env": "2.1.0",
+    "roots/bedrock-autoloader": "1.0.4",
     "roots/wp-config": "1.0.0",
-    "wpackagist-theme/neve": "3.4.2"
+    "roots/wordpress": "5.8.8",
+    "koodimonni-language/core-nl_nl": "5.8.8",
+    "wpackagist-theme/neve": "3.1.2",
+    "wpackagist-plugin/ga-google-analytics": "20231101",
+    "wpackagist-plugin/otter-blocks": "2.4.1",
+    "wpackagist-plugin/wp-youtube-lyte": "1.7.22",
+    "wpackagist-plugin/wpforms-lite": "1.8.4.1"
   },
   "config": {
     "optimize-autoloader": true,
     "preferred-install": "dist",
     "allow-plugins": {
       "composer/installers": true,
-      "roots/wordpress-core-installer": true
+      "roots/wordpress-core-installer": true,
+      "koodimonni/composer-dropin-installer": true
     }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "public_html/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "public_html/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public_html/mu-plugins/{$name}/": ["type:wordpress-muplugin", "type:wordpress-plugin"],
       "public_html/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "dropin-paths": {
+      "public_html/languages/": ["vendor:koodimonni-language"],
+      "public_html/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "public_html/languages/themes/": ["vendor:koodimonni-theme-language"]
     },
     "wordpress-install-dir": "public_html/core"
   },
   "scripts": {
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
-    ]
-  },
-  "archive": {
-    "name": "muziekpraktijkvivo",
-    "exclude": [
-      ".env",
-      ".git*",
-      "*.md",
-      "composer.*",
-      "dist"
     ]
   }
 }

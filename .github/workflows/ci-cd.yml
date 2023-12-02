@@ -1,6 +1,19 @@
 name: CI/CD
-run-name: CI/CD ${{ github.ref }}
-on: push
+run-name: CI/CD ${{ github.base_ref || github.ref_name }}
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - labeled
+    branches:
+      - master
+  workflow_dispatch:
+    
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
@@ -12,7 +25,7 @@ jobs:
           tools: composer:v2
 
       - name: Check out repository code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build
         run: composer install
@@ -20,29 +33,65 @@ jobs:
       - name: Cache webroot
         uses: actions/cache@v3
         with:
-          key: webroot-${{ github.run_number }}.${{ github.run_attempt }}
+          key: webroot-${{ github.run_number }}
           path: |
             config
             public_html
             vendor
-            .env.example
             wp-cli.yml
 
   continuous-deployment:
     needs: continuous-integration
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref_name == 'master' || contains( github.event.pull_request.labels.*.name, 'deploy_acceptance')
+    environment:
+      name: ${{ github.ref_name == 'master' && 'production' || 'acceptance' }}
+      url: ${{ github.ref_name == 'master' && 'https://www.muziekpraktijkvivo.nl' || 'https://acceptatie.muziekpraktijkvivo.nl' }}
     steps:
       - name: Take webroot from cache
         uses: actions/cache@v3
         with:
-          key: webroot-${{ github.run_number }}.${{ github.run_attempt }}
+          key: webroot-${{ github.run_number }}
           path: |
             config
             public_html
             vendor
-            .env.example
             wp-cli.yml
       
+      - name: Checkout secrets
+        uses: actions/checkout@v4
+        with:
+          repository: muziekpraktijkvivo/muziekpraktijkvivo-website-secrets
+          ref: ${{ vars.SECRETS_REPO_BRANCH }}
+          ssh-key: ${{ secrets.READ_SECRETS_REPO_KEY }}
+          path: './secrets'
+
+      - name: Deploy secrets
+        run: |
+          rsync -r ./secrets/.ssh/ ~/.ssh
+          chmod 400 ~/.ssh/*.key
+          cp ./secrets/.env ./
+      
+      # exclude 'acceptatie' beacuse its a symlink for the subdomain at the hosting provider
       - name: Deploy on hosting provider
-        run: rsync --version
+        run: |
+          rsync --recursive --checksum --delete --force --compress --human-readable --verbose \
+          --include='/config/' \
+          --include='/public_html/' \
+          --exclude='/public_html/acceptatie' \
+          --exclude='/public_html/uploads/' \
+          --include='/vendor/' \
+          --include='/.env' \
+          --include='/wp-cli.yml' \
+          --exclude='/*' \
+          ./ hostingprovider:${{ vars.HOSTING_PROVIDER_WEBROOT }}
+
+      - name: Copy production database and uploads to acceptance
+        if: contains( github.event.pull_request.labels.*.name, 'deploy_acceptance')
+        run: |
+          rsync --checksum --force ./secrets/.my.cnf hostingprovider:~/
+          ssh hostingprovider '
+            DATABASENAME=$(mysql --defaults-group-suffix=production --skip-column-names --batch --execute="select database()") &&
+            mysqldump --defaults-group-suffix=production $DATABASENAME | mysql --defaults-group-suffix=acceptance &&
+            rsync --checksum --recursive --delete ${{ vars.HOSTING_PROVIDER_PRODUCTION_WEBROOT }}/public_html/uploads/ ${{ vars.HOSTING_PROVIDER_WEBROOT }}/public_html/uploads
+          '

@@ -1,7 +1,7 @@
 <?php
 /**
  * Your base production configuration goes in this file. Environment-specific
- * overrides go in their respective config/environments/{{WP_ENV}}.php file.
+ * overrides go in their respective config/environments/{{WP_ENVIRONMENT_TYPE}}.php file.
  *
  * A good default policy is to deviate from the production config as little as
  * possible. Try to define as much of your configuration in this file as you
@@ -19,34 +19,33 @@ use function Env\env;
 $root_dir = dirname(__DIR__);
 
 /**
- * Document Root
- *
- * @var string
- */
-$webroot_dir = $root_dir . '/public_html';
-
-/**
  * Use Dotenv to set required environment variables and load .env file in root
  * .env.local will override .env if it exists
  */
-$env_files = file_exists($root_dir . '/.env.local')
-    ? ['.env', '.env.local']
-    : ['.env'];
-
-$dotenv = Dotenv\Dotenv::createUnsafeImmutable($root_dir, $env_files, false);
-if (file_exists($root_dir . '/.env')) {
-    $dotenv->load();
-    $dotenv->required(['WP_HOME', 'WP_SITEURL']);
-    if (!env('DATABASE_URL')) {
-        $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD']);
+$env_file_paths = [];
+$env_file_names = [];
+foreach (["$root_dir/.env", "$root_dir/.env.local", env('ENV_FILE')] as $env_file) {
+    if(file_exists($env_file)) {
+        $env_file_paths[dirname($env_file)] = dirname($env_file);
+        $env_file_names[basename($env_file)] = basename($env_file);
     }
 }
 
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable($env_file_paths, $env_file_names, false);
+if($env_file_names !== []) {
+    $dotenv->load();
+}
+$dotenv->required(['WP_HOME', 'WP_SITEURL']);
+if (!env('DATABASE_URL')) {
+    $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD']);
+}
+
 /**
- * Set up our global environment constant and load its config first
+ * Set up global environment constant and load its config first
+ * Possible values are 'local', 'development', 'staging', and 'production'.
  * Default: production
  */
-define('WP_ENV', env('WP_ENV') ?: 'production');
+define('WP_ENVIRONMENT_TYPE', env('WP_ENVIRONMENT_TYPE') ?: 'production');
 
 /**
  * URLs
@@ -58,7 +57,7 @@ Config::define('WP_SITEURL', env('WP_SITEURL'));
  * Custom Content Directory
  */
 Config::define('CONTENT_DIR', '');
-Config::define('WP_CONTENT_DIR', $webroot_dir . Config::get('CONTENT_DIR'));
+Config::define('WP_CONTENT_DIR', WEBROOT_DIR . Config::get('CONTENT_DIR'));
 Config::define('WP_CONTENT_URL', Config::get('WP_HOME') . Config::get('CONTENT_DIR'));
 
 /**
@@ -106,6 +105,11 @@ Config::define('DISALLOW_FILE_MODS', true);
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?: true);
 
 /**
+ * Theme settings
+ */
+Config::define('WP_DEFAULT_THEME', 'neve');
+
+/**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);
@@ -121,7 +125,7 @@ if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROT
     $_SERVER['HTTPS'] = 'on';
 }
 
-$env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
+$env_config = __DIR__ . '/environments/' . WP_ENVIRONMENT_TYPE . '.php';
 
 if (file_exists($env_config)) {
     require_once $env_config;
@@ -133,5 +137,5 @@ Config::apply();
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
-    define('ABSPATH', $webroot_dir . '/core/');
+    define('ABSPATH', WEBROOT_DIR . '/core/');
 }
