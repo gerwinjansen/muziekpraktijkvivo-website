@@ -1,6 +1,8 @@
 public_html/core
 public_html/mu-plugins/*
 !public_html/mu-plugins/bedrock-autoloader.php
+!public_html/mu-plugins/replace-fragment
+!public_html/mu-plugins/wp-option-as-constant.php
 public_html/plugins
 public_html/themes
 public_html/languages
