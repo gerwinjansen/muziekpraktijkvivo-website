@@ -61,7 +61,7 @@ jobs:
       - name: Checkout secrets
         uses: actions/checkout@v4
         with:
-          repository: muziekpraktijkvivo/muziekpraktijkvivo-website-secrets
+          repository: gerwinjansen/muziekpraktijkvivo-website-secrets
           ref: ${{ vars.SECRETS_REPO_BRANCH }}
           ssh-key: ${{ secrets.READ_SECRETS_REPO_KEY }}
           path: './secrets'
