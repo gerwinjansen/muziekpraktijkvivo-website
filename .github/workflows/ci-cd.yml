@@ -72,13 +72,11 @@ jobs:
           chmod 400 ~/.ssh/*.key
           cp ./secrets/.env ./
       
-      # exclude 'acceptatie' beacuse its a symlink for the subdomain at the hosting provider
       - name: Deploy on hosting provider
         run: |
           rsync --recursive --checksum --delete --force --compress --human-readable --verbose \
           --include='/config/' \
           --include='/public_html/' \
-          --exclude='/public_html/acceptatie' \
           --exclude='/public_html/uploads/' \
           --include='/vendor/' \
           --include='/.env' \
@@ -92,6 +90,14 @@ jobs:
           rsync --checksum --force ./secrets/.my.cnf hostingprovider:~/
           ssh hostingprovider '
             DATABASENAME=$(mysql --defaults-group-suffix=production --skip-column-names --batch --execute="select database()") &&
-            mysqldump --defaults-group-suffix=production $DATABASENAME | mysql --defaults-group-suffix=acceptance &&
-            rsync --checksum --recursive --delete ${{ vars.HOSTING_PROVIDER_PRODUCTION_WEBROOT }}/public_html/uploads/ ${{ vars.HOSTING_PROVIDER_WEBROOT }}/public_html/uploads
+            mysqldump --defaults-group-suffix=production $DATABASENAME |
+              sed -E "s~https?://muziekpraktijkvivo.nl~https://acceptatie.muziekpraktijkvivo.nl~g" |
+              sed -E "s~/wp-content/~/~g" |
+              mysql --defaults-group-suffix=acceptance &&
+            mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_options WHERE option_name LIKE '%_transient_%';"
+            mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_postmeta WHERE meta_key = '_themeisle_gutenberg_block_styles';"
+            mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_postmeta WHERE meta_key = '_themeisle_gutenberg_block_fonts';"
+            mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_postmeta WHERE meta_key = '_themeisle_gutenberg_block_stylesheet';"
+            rsync --checksum --recursive --delete --exclude="/themeisle-gutenberg"
+              ${{ vars.HOSTING_PROVIDER_PRODUCTION_WEBROOT }}/public_html/uploads/ ${{ vars.HOSTING_PROVIDER_WEBROOT }}/public_html/uploads
           '
