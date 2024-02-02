@@ -14,11 +14,11 @@ COPY --chown=www-data:www-data --chmod=0500 config/ /var/www/config/
 COPY --chown=www-data:www-data --chmod=0500 public_html/ /var/www/html/
 
 RUN set -eux; \
-    mkdir /var/www/html/upload; \
-    chown www-data:www-data /var/www/html/upload; \
-    chmod 0700 /var/www/html/upload;
+    mkdir /var/www/html/uploads; \
+    chown www-data:www-data /var/www/html/uploads; \
+    chmod 0700 /var/www/html/uploads;
 
 #USER www-data:www-data
 EXPOSE 80
-VOLUME /var/www/html/upload
+VOLUME /var/www/html/uploads
 CMD ["apache2-foreground"]

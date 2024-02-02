@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:  wp-option as constant
+ * Plugin Name:  wp-option from constant
  * Description:  Intercepts reads from the wp-options table and returns the corresponding WP_OPTION_<NAME> constant if available.
  * Version:      1.0
  * Author:       Gerwin Jansen
