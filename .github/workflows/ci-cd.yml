@@ -99,5 +99,5 @@ jobs:
             mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_postmeta WHERE meta_key = \"_themeisle_gutenberg_block_fonts\";" &&
             mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_postmeta WHERE meta_key = \"_themeisle_gutenberg_block_stylesheet\";" &&
             rsync --checksum --recursive --delete --exclude="/themeisle-gutenberg" \
-              ${{ vars.HOSTING_PROVIDER_PRODUCTION_WEBROOT }}/public_html/uploads/ ${{ vars.HOSTING_PROVIDER_WEBROOT }}/public_html/uploads
+              ${{ vars.HOSTING_PROVIDER_PRODUCTION_WEBROOT }}/public_html/wp-content/uploads/ ${{ vars.HOSTING_PROVIDER_WEBROOT }}/public_html/uploads
           '
