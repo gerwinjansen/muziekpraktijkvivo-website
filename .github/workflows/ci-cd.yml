@@ -92,7 +92,6 @@ jobs:
             DATABASENAME=$(mysql --defaults-group-suffix=production --skip-column-names --batch --execute="select database()") &&
             mysqldump --defaults-group-suffix=production $DATABASENAME |
               sed -E "s~https?://muziekpraktijkvivo.nl~https://acceptatie.muziekpraktijkvivo.nl~g" |
-              sed -E "s~/wp-content/~/~g" |
               mysql --defaults-group-suffix=acceptance &&
             mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_options WHERE option_name LIKE \"%_transient_%\";" &&
             mysql --defaults-group-suffix=acceptance --execute "DELETE FROM wp_www_postmeta WHERE meta_key = \"_themeisle_gutenberg_block_styles\";" &&
