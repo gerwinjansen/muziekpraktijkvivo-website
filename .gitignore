@@ -4,7 +4,6 @@ public_html/mu-plugins/*
 !public_html/mu-plugins/bedrock-autoloader.php
 !public_html/mu-plugins/random-urn-for-post-guid.php
 !public_html/mu-plugins/wp-option-from-constant.php
-public_html/plugins
 public_html/themes
 public_html/languages
 public_html/uploads
