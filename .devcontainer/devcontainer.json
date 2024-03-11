@@ -1,0 +1,30 @@
+{
+    "name": "Muziekpraktijk Vivo website",
+
+    "workspaceFolder": "/var/www/",
+    "dockerComposeFile": ["../docker-compose.yaml", "docker-compose.extend.yaml"],
+    "service": "webserver",
+
+    "features": {
+        "./php-xdebug": {}
+    },
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "php.validate.executablePath": "/usr/local/bin/php",
+                "terminal.integrated.shell.linux": "/bin/bash",
+                "php.suggest.basic": false // avoids duplicate autocomplete
+            },
+            "extensions": [
+                "xdebug.php-debug",
+                "zobo.php-intellisense"
+                // "mrmlnc.vscode-apache",
+                // "wordpresstoolbox.wordpress-toolbox",
+                // "johnbillion.vscode-wordpress-hooks"
+            ]
+        }
+    },
+
+    "remoteUser": "root"
+}

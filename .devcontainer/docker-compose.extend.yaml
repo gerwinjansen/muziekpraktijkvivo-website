@@ -1,0 +1,8 @@
+services:
+  webserver:
+      build:
+        context: .
+        target: wordpress-dependencies
+      image: muziekpraktijkvivo-devcontainer
+      volumes:
+        - .:/var/www:cached
