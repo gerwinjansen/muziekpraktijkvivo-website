@@ -1,8 +1,11 @@
 {
     "name": "Muziekpraktijk Vivo website",
 
+    // Build is done here, see comment in docker-compose.yaml
+    "initializeCommand": "docker build --target wordpress-dependencies --tag wordpress-dependencies:latest .",
+
     "workspaceFolder": "/var/www/",
-    "dockerComposeFile": ["../docker-compose.yaml", "docker-compose.extend.yaml"],
+    "dockerComposeFile": "docker-compose.yaml",
     "service": "webserver",
 
     "features": {

@@ -12,8 +12,14 @@ ENV PHP_INI_DIR /usr/local/etc/php
 ENV APACHE_CONFDIR /etc/apache2
 ENV APACHE_ENVVARS $APACHE_CONFDIR/envvars
 EXPOSE 80
+WORKDIR /var/www
 CMD ["apache2-foreground"]
 #USER www-data:www-data
+
+# Adjust to DirectAdmin directory as used by the hosting provider
+RUN cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.orig && \
+    sed 's@DocumentRoot /var/www/html@DocumentRoot /var/www/public_html@g' < /etc/apache2/sites-available/000-default.conf.orig > /etc/apache2/sites-available/000-default.conf && \
+    rm /etc/apache2/sites-available/000-default.conf.orig
 
 FROM wordpress-dependencies as muziekpraktijkvivo-website
 COPY --chown=www-data:www-data --chmod=0500 vendor/ /var/www/vendor/

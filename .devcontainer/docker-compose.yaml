@@ -1,0 +1,37 @@
+services:
+  webserver:
+    image: wordpress-dependencies:latest
+    # Disabled because devcontainer startup fails when it runs 'docker inspect --type image scratch'
+    # Building is done using initializeCommand in devcontainer.json
+    # build:
+    #   context: ..
+    #   target: wordpress-dependencies
+    volumes:
+        - ..:/var/www:cached
+    ports:
+      - 80:80
+    environment:
+      - DB_HOST=dbserver
+      - DB_USER=wordpress
+      - DB_PASSWORD=wordpresspwd
+      - DB_NAME=muziekpraktijkvivo
+      - DB_PREFIX=wp_www_
+      - WP_ENVIRONMENT_TYPE=development
+      - WP_HOME=http://localhost
+      - WP_SITEURL=http://localhost/core
+
+  dbserver:
+    image: mariadb:10.11.4
+    volumes:
+      - mariadb:/var/lib/mysql
+    ports:
+      - 3306:3306
+    #Only used for initialization
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpwd
+      MYSQL_DATABASE: muziekpraktijkvivo
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpresspwd
+
+volumes:
+  mariadb:
