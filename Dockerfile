@@ -6,6 +6,7 @@ RUN set -eux; \
     /usr/src \
     /var/www/*
 
+
 FROM scratch as wordpress-dependencies
 COPY --from=wordpress-stripped / /
 ENV PHP_INI_DIR /usr/local/etc/php
@@ -20,6 +21,16 @@ CMD ["apache2-foreground"]
 RUN cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.orig && \
     sed 's@DocumentRoot /var/www/html@DocumentRoot /var/www/public_html@g' < /etc/apache2/sites-available/000-default.conf.orig > /etc/apache2/sites-available/000-default.conf && \
     rm /etc/apache2/sites-available/000-default.conf.orig
+
+
+FROM wordpress-dependencies as wordpress-devcontainer
+RUN set -eux; \
+	apt-get update; \
+	apt-get install -y --no-install-recommends \
+		git \
+	; \
+	rm -rf /var/lib/apt/lists/*
+
 
 FROM wordpress-dependencies as muziekpraktijkvivo-website
 COPY --chown=www-data:www-data --chmod=0500 vendor/ /var/www/vendor/

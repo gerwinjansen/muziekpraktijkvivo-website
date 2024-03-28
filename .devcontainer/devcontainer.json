@@ -2,14 +2,20 @@
     "name": "Muziekpraktijk Vivo website",
 
     // Build is done here, see comment in docker-compose.yaml
-    "initializeCommand": "docker build --target wordpress-dependencies --tag wordpress-dependencies:latest .",
+    "initializeCommand": "docker build --target wordpress-devcontainer --tag wordpress-devcontainer:latest .",
 
     "workspaceFolder": "/var/www/",
     "dockerComposeFile": "docker-compose.yaml",
     "service": "webserver",
 
     "features": {
-        "./php-xdebug": {}
+        "./php-xdebug": {
+            //See https://xdebug.org/docs/compat and https://xdebug.org/updates
+            "version": "3.1.6"
+        },
+        "ghcr.io/devcontainers-contrib/features/composer:1": {
+            "version": "2.7.2"
+        }
     },
 
     "customizations": {

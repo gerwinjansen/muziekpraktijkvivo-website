@@ -1,11 +1,11 @@
 services:
   webserver:
-    image: wordpress-dependencies:latest
+    image: wordpress-devcontainer:latest
     # Disabled because devcontainer startup fails when it runs 'docker inspect --type image scratch'
     # Building is done using initializeCommand in devcontainer.json
     # build:
     #   context: ..
-    #   target: wordpress-dependencies
+    #   target: wordpress-devcontainer
     volumes:
         - ..:/var/www:cached
     ports:
