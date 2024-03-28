@@ -27,6 +27,7 @@ FROM wordpress-dependencies as wordpress-devcontainer
 RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
+        openssh-client \
 		git \
 	; \
 	rm -rf /var/lib/apt/lists/*
