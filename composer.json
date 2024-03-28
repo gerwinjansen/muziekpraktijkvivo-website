@@ -43,7 +43,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "public_html/mu-plugins/{$name}/": ["type:wordpress-muplugin", "type:wordpress-plugin"],
+      "public_html/plugins/{$name}/": ["type:wordpress-muplugin", "type:wordpress-plugin"],
       "public_html/themes/{$name}/": ["type:wordpress-theme"]
     },
     "dropin-paths": {
