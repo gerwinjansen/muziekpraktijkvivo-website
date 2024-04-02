@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d1ad715514cdd5cfb935f48d896f95b",
+    "content-hash": "66d9dd27fa48eea7b9dc8cb25728189f",
     "packages": [
         {
             "name": "composer/installers",
@@ -215,10 +215,10 @@
         },
         {
             "name": "koodimonni-language/core-nl_nl",
-            "version": "5.8.9",
+            "version": "6.4.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/5.8.9/nl_NL.zip"
+                "url": "https://downloads.wordpress.org/translation/core/6.4.3/nl_NL.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -486,7 +486,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.8.9",
+            "version": "6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -517,7 +517,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/6.4.3"
+                "source": "https://github.com/roots/wordpress/tree/6.5"
             },
             "funding": [
                 {
@@ -600,22 +600,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "5.8.9",
+            "version": "6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.8.9"
+                "reference": "6.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-5.8.9-no-content.zip",
-                "shasum": "adfaa6e23891d69cfe7d220e9df03a29b0d8fcc6"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.5-no-content.zip",
+                "shasum": "bc1bb88bbdedbea276cd09c13054765c532701db"
             },
             "require": {
-                "php": ">= 5.6.20"
+                "php": ">= 7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "5.8.9"
+                "wordpress/core-implementation": "6.5"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -666,7 +666,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-01-30T21:22:14+00:00"
+            "time": "2024-04-02T18:15:04+00:00"
         },
         {
             "name": "roots/wp-config",
