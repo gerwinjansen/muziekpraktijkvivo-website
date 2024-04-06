@@ -18,19 +18,17 @@ CMD ["apache2-foreground"]
 #USER www-data:www-data
 
 # Adjust to DirectAdmin directory as used by the hosting provider
-RUN cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.orig && \
-    sed 's@DocumentRoot /var/www/html@DocumentRoot /var/www/public_html@g' < /etc/apache2/sites-available/000-default.conf.orig > /etc/apache2/sites-available/000-default.conf && \
-    rm /etc/apache2/sites-available/000-default.conf.orig
-
+RUN sed --in-place 's@DocumentRoot /var/www/html@DocumentRoot /var/www/public_html@g' /etc/apache2/sites-available/000-default.conf
 
 FROM wordpress-dependencies as wordpress-devcontainer
 RUN set -eux; \
-	apt-get update; \
-	apt-get install -y --no-install-recommends \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
         openssh-client \
-		git \
-	; \
-	rm -rf /var/lib/apt/lists/*
+        git \
+        mariadb-client \
+    ; \
+    rm -rf /var/lib/apt/lists/*
 
 
 FROM wordpress-dependencies as muziekpraktijkvivo-website

@@ -15,6 +15,13 @@
         },
         "ghcr.io/devcontainers-contrib/features/composer:1": {
             "version": "2.7.2"
+        },
+        "./mariadb-client-setup": {
+            //Same values as in docker-compose.yaml
+            "hostname": "dbserver",
+            "database": "muziekpraktijkvivo",
+            "username": "root",
+            "password": "rootpwd"
         }
     },
 
@@ -27,10 +34,11 @@
             },
             "extensions": [
                 "xdebug.php-debug",
-                "zobo.php-intellisense"
-                // "mrmlnc.vscode-apache",
-                // "wordpresstoolbox.wordpress-toolbox",
-                // "johnbillion.vscode-wordpress-hooks"
+                "zobo.php-intellisense",
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers",
+                "yzhang.markdown-all-in-one",
+                "me-dutour-mathieu.vscode-github-actions"
             ]
         }
     },
