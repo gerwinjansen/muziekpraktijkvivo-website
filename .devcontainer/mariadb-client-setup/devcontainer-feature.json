@@ -1,0 +1,24 @@
+{
+  "name": "MariaDB client setup",
+  "id": "mariadb-client-setup",
+  "version": "0.0.1",
+  "description": "Creates the ~/.my.cnf file and copies the restoredatabase utility script",
+  "options": {
+    "hostname": {
+      "type": "string",
+      "default": "localhost"
+    },
+    "database": {
+      "type": "string",
+      "default": ""
+    },
+    "username": {
+      "type": "string",
+      "default": "root"
+    },
+    "password": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}
