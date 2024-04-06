@@ -1,8 +1,8 @@
 {
-  "name": "MariaDB CLI configuration",
-  "id": "mariadb-cli-cnf",
+  "name": "MariaDB client setup",
+  "id": "mariadb-client-setup",
   "version": "0.0.1",
-  "description": "Creates the ~/.my.cnf file and a databaserestore utility script",
+  "description": "Creates the ~/.my.cnf file and copies the restoredatabase utility script",
   "options": {
     "hostname": {
       "type": "string",
