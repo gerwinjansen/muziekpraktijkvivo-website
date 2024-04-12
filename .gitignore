@@ -24,5 +24,9 @@ public_html/cache
 # WP-CLI
 wp-cli.local.yml
 
-#build output
+# Build output
 dist
+
+# Backups from production website
+*.zip
+*.sql
