@@ -15,7 +15,6 @@ services:
       - DB_USER=wordpress
       - DB_PASSWORD=wordpresspwd
       - DB_NAME=muziekpraktijkvivo
-      - DB_PREFIX=wp_www_
       - WP_ENVIRONMENT_TYPE=development
       - WP_HOME=http://localhost
       - WP_SITEURL=http://localhost/core
