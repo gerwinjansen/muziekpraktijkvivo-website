@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82aa522d643e6e20eaab0db793fdb08a",
+    "content-hash": "014ccd56552b1a9696e18d1768809ceb",
     "packages": [
         {
             "name": "composer/installers",
@@ -215,10 +215,10 @@
         },
         {
             "name": "koodimonni-language/core-nl_nl",
-            "version": "6.2.5",
+            "version": "6.3.4",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/6.2.5/nl_NL.zip"
+                "url": "https://downloads.wordpress.org/translation/core/6.3.4/nl_NL.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -486,7 +486,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.2.5",
+            "version": "6.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -600,22 +600,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.2.5",
+            "version": "6.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.2.5"
+                "reference": "6.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.2.5-no-content.zip",
-                "shasum": "749cb477cdb7de614fa8b6d205520eecb2332d60"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.3.4-no-content.zip",
+                "shasum": "c97afcf2bac0053c053183691b93c7e16779c1ce"
             },
             "require": {
-                "php": ">= 5.6.20"
+                "php": ">= 7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.2.5"
+                "wordpress/core-implementation": "6.3.4"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -666,7 +666,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-04-09T22:02:14+00:00"
+            "time": "2024-04-09T22:02:15+00:00"
         },
         {
             "name": "roots/wp-config",
@@ -1057,15 +1057,15 @@
         },
         {
             "name": "wpackagist-plugin/otter-blocks",
-            "version": "2.3.4",
+            "version": "2.4.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/otter-blocks/",
-                "reference": "tags/2.3.4"
+                "reference": "tags/2.4.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/otter-blocks.2.3.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/otter-blocks.2.4.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1111,15 +1111,15 @@
         },
         {
             "name": "wpackagist-theme/neve",
-            "version": "3.6.7",
+            "version": "3.7.5",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/neve/",
-                "reference": "3.6.7"
+                "reference": "3.7.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/neve.3.6.7.zip"
+                "url": "https://downloads.wordpress.org/theme/neve.3.7.5.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
