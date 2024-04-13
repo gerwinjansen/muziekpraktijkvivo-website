@@ -1,4 +1,4 @@
-FROM wordpress:5.8.3-php7.4-apache as wordpress-stripped
+FROM wordpress:php8.1-apache as wordpress-stripped
 
 RUN set -eux; \
     rm -Rf \
@@ -27,6 +27,7 @@ RUN set -eux; \
         openssh-client \
         git \
         mariadb-client \
+        p7zip-full \
     ; \
     rm -rf /var/lib/apt/lists/*
 
