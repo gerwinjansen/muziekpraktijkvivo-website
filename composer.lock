@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b530cf12b896c9bdbb7f1b9366c36a9",
+    "content-hash": "a1daac94f2568ee771f2ed41fb5e1d63",
     "packages": [
         {
             "name": "composer/installers",
@@ -215,10 +215,10 @@
         },
         {
             "name": "koodimonni-language/core-nl_nl",
-            "version": "6.4.4",
+            "version": "6.5.2",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/6.4.4/nl_NL.zip"
+                "url": "https://downloads.wordpress.org/translation/core/6.5.2/nl_NL.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -486,7 +486,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.4.4",
+            "version": "6.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -600,22 +600,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.4.4",
+            "version": "6.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.4.4"
+                "reference": "6.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.4.4-no-content.zip",
-                "shasum": "136b40e61660f8d4b78cf423be0234a1e716ec6a"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.5.2-no-content.zip",
+                "shasum": "09a5fbf3d93546bc54e96ca27888b29bba906492"
             },
             "require": {
                 "php": ">= 7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.4.4"
+                "wordpress/core-implementation": "6.5.2"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -666,7 +666,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-04-09T22:02:15+00:00"
+            "time": "2024-04-09T22:02:16+00:00"
         },
         {
             "name": "roots/wp-config",
