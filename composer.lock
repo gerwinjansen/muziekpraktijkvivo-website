@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "242e368146c7e0fe7b0158aefd96d362",
+    "content-hash": "1b530cf12b896c9bdbb7f1b9366c36a9",
     "packages": [
         {
             "name": "composer/installers",
@@ -215,10 +215,10 @@
         },
         {
             "name": "koodimonni-language/core-nl_nl",
-            "version": "6.3.4",
+            "version": "6.4.4",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/6.3.4/nl_NL.zip"
+                "url": "https://downloads.wordpress.org/translation/core/6.4.4/nl_NL.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -486,7 +486,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "6.3.4",
+            "version": "6.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -600,22 +600,22 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "6.3.4",
+            "version": "6.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.3.4"
+                "reference": "6.4.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.3.4-no-content.zip",
-                "shasum": "c97afcf2bac0053c053183691b93c7e16779c1ce"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.4.4-no-content.zip",
+                "shasum": "136b40e61660f8d4b78cf423be0234a1e716ec6a"
             },
             "require": {
                 "php": ">= 7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.3.4"
+                "wordpress/core-implementation": "6.4.4"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -1039,15 +1039,15 @@
         },
         {
             "name": "wpackagist-plugin/ga-google-analytics",
-            "version": "20231101",
+            "version": "20240308",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/ga-google-analytics/",
-                "reference": "tags/20231101"
+                "reference": "tags/20240308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ga-google-analytics.20231101.zip"
+                "url": "https://downloads.wordpress.org/plugin/ga-google-analytics.20240308.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1057,15 +1057,15 @@
         },
         {
             "name": "wpackagist-plugin/otter-blocks",
-            "version": "2.4.1",
+            "version": "2.6.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/otter-blocks/",
-                "reference": "tags/2.4.1"
+                "reference": "tags/2.6.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/otter-blocks.2.4.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/otter-blocks.2.6.9.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1075,15 +1075,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-youtube-lyte",
-            "version": "1.7.22",
+            "version": "1.7.23",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-youtube-lyte/",
-                "reference": "tags/1.7.22"
+                "reference": "tags/1.7.23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.22.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.23.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -1111,15 +1111,15 @@
         },
         {
             "name": "wpackagist-theme/neve",
-            "version": "3.7.5",
+            "version": "3.8.6",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/neve/",
-                "reference": "3.7.5"
+                "reference": "3.8.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/neve.3.7.5.zip"
+                "url": "https://downloads.wordpress.org/theme/neve.3.8.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"

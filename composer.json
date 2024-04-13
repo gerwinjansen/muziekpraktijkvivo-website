@@ -22,12 +22,12 @@
     "oscarotero/env": "2.1.0",
     "roots/bedrock-autoloader": "1.0.4",
     "roots/wp-config": "1.0.0",
-    "roots/wordpress": "6.3.4",
-    "koodimonni-language/core-nl_nl": "6.3.4",
-    "wpackagist-theme/neve": "3.7.5",
-    "wpackagist-plugin/ga-google-analytics": "20231101",
-    "wpackagist-plugin/otter-blocks": "2.4.1",
-    "wpackagist-plugin/wp-youtube-lyte": "1.7.22",
+    "roots/wordpress": "6.4.4",
+    "koodimonni-language/core-nl_nl": "6.4.4",
+    "wpackagist-theme/neve": "3.8.6",
+    "wpackagist-plugin/ga-google-analytics": "20240308",
+    "wpackagist-plugin/otter-blocks": "2.6.9",
+    "wpackagist-plugin/wp-youtube-lyte": "1.7.23",
     "wpackagist-plugin/wpforms-lite": "1.8.7.2"
   },
   "config": {
