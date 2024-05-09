@@ -1,0 +1,27 @@
+name: Auto-merge Dependabot patches
+on: pull_request
+
+jobs:
+  dependabot:
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
+    steps:
+      - name: Get Token
+        id: permission
+        uses: peter-murray/workflow-application-token-action@v3
+        with:
+          application_id: ${{ vars.AUTOMERGE_APP_ID }}
+          application_private_key: ${{ secrets.AUTOMERGE_APP_PRIVATE_KEY }}
+
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2.0.0
+        with:
+          github-token: ${{ steps.permission.outputs.token }}
+
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{ steps.permission.outputs.token }}
