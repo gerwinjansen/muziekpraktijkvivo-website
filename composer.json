@@ -28,7 +28,7 @@
     "wpackagist-plugin/ga-google-analytics": "20240308",
     "wpackagist-plugin/otter-blocks": "2.6.12",
     "wpackagist-plugin/wp-youtube-lyte": "1.7.23",
-    "wpackagist-plugin/wpforms-lite": "1.8.8.3"
+    "wpackagist-plugin/wpforms-lite": "1.8.9.1"
   },
   "config": {
     "optimize-autoloader": true,
