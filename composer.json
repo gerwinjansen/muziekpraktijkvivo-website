@@ -23,7 +23,7 @@
     "roots/bedrock-autoloader": "1.0.4",
     "roots/wp-config": "1.0.0",
     "roots/wordpress": "6.5.5",
-    "koodimonni-language/core-nl_nl": "6.5.4",
+    "koodimonni-language/core-nl_nl": "6.5.5",
     "wpackagist-theme/neve": "3.8.7",
     "wpackagist-plugin/ga-google-analytics": "20240308",
     "wpackagist-plugin/otter-blocks": "2.6.12",
