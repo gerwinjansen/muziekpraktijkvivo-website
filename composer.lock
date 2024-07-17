@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "72f04b5dcf6b646b21552f175e8b4588",
+    "content-hash": "2ec6578edf65fdb2b833a054f359e904",
     "packages": [
         {
             "name": "composer/installers",
@@ -216,10 +216,10 @@
         },
         {
             "name": "koodimonni-language/core-nl_nl",
-            "version": "6.5.5",
+            "version": "6.6",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/6.5.5/nl_NL.zip"
+                "url": "https://downloads.wordpress.org/translation/core/6.6/nl_NL.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
