@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6e79552b2b0f0803689dcc20638d2d1",
+    "content-hash": "99e2000e5f6e2ace5e6be3145d77f346",
     "packages": [
         {
             "name": "composer/installers",
@@ -1112,15 +1112,15 @@
         },
         {
             "name": "wpackagist-theme/neve",
-            "version": "3.8.9",
+            "version": "3.8.10",
             "source": {
                 "type": "svn",
                 "url": "https://themes.svn.wordpress.org/neve/",
-                "reference": "3.8.9"
+                "reference": "3.8.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/neve.3.8.9.zip"
+                "url": "https://downloads.wordpress.org/theme/neve.3.8.10.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
