@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77e12e4ffb4c03d80bc825354d40cffa",
+    "content-hash": "f917e6777ab4a6fe61dbd57b674fb725",
     "packages": [
         {
             "name": "composer/installers",
@@ -1058,15 +1058,15 @@
         },
         {
             "name": "wpackagist-plugin/otter-blocks",
-            "version": "2.6.13",
+            "version": "3.0.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/otter-blocks/",
-                "reference": "tags/2.6.13"
+                "reference": "tags/3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/otter-blocks.2.6.13.zip"
+                "url": "https://downloads.wordpress.org/plugin/otter-blocks.3.0.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
