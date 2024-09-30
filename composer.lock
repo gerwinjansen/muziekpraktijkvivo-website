@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e8340bb5b6cf01c3d839103ada1d367",
+    "content-hash": "28724ef59a58fc9f961edf5390840021",
     "packages": [
         {
             "name": "composer/installers",
@@ -1076,15 +1076,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-youtube-lyte",
-            "version": "1.7.23",
+            "version": "1.7.25",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-youtube-lyte/",
-                "reference": "tags/1.7.23"
+                "reference": "tags/1.7.25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.23.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.25.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
