@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Get Token
         id: permission
-        uses: peter-murray/workflow-application-token-action@v3
+        uses: peter-murray/workflow-application-token-action@v4
         with:
           application_id: ${{ vars.AUTOMERGE_APP_ID }}
           application_private_key: ${{ secrets.AUTOMERGE_APP_PRIVATE_KEY }}
