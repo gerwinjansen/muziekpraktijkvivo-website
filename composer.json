@@ -24,7 +24,7 @@
     "roots/wp-config": "1.0.0",
     "roots/wordpress": "6.7.1",
     "koodimonni-language/core-nl_nl": "6.7.1",
-    "wpackagist-theme/neve": "4.0.0",
+    "wpackagist-theme/neve": "4.0.1",
     "wpackagist-plugin/ga-google-analytics": "20241102",
     "wpackagist-plugin/otter-blocks": "3.0.9",
     "wpackagist-plugin/wp-youtube-lyte": "1.7.26",
