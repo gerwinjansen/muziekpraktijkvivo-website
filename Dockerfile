@@ -1,4 +1,4 @@
-FROM wordpress:php8.1-apache as wordpress-stripped
+FROM wordpress:php8.2-apache AS wordpress-stripped
 
 RUN set -eux; \
     rm -Rf \
@@ -7,11 +7,11 @@ RUN set -eux; \
     /var/www/*
 
 
-FROM scratch as wordpress-dependencies
+FROM scratch AS wordpress-dependencies
 COPY --from=wordpress-stripped / /
-ENV PHP_INI_DIR /usr/local/etc/php
-ENV APACHE_CONFDIR /etc/apache2
-ENV APACHE_ENVVARS $APACHE_CONFDIR/envvars
+ENV PHP_INI_DIR=/usr/local/etc/php
+ENV APACHE_CONFDIR=/etc/apache2
+ENV APACHE_ENVVARS=$APACHE_CONFDIR/envvars
 EXPOSE 80
 WORKDIR /var/www
 CMD ["apache2-foreground"]
@@ -20,7 +20,7 @@ CMD ["apache2-foreground"]
 # Adjust to DirectAdmin directory as used by the hosting provider
 RUN sed --in-place 's@DocumentRoot /var/www/html@DocumentRoot /var/www/public_html@g' /etc/apache2/sites-available/000-default.conf
 
-FROM wordpress-dependencies as wordpress-devcontainer
+FROM wordpress-dependencies AS wordpress-devcontainer
 RUN set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
@@ -32,7 +32,7 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*
 
 
-FROM wordpress-dependencies as muziekpraktijkvivo-website
+FROM wordpress-dependencies AS muziekpraktijkvivo-website
 COPY --chown=www-data:www-data --chmod=0500 vendor/ /var/www/vendor/
 COPY --chown=www-data:www-data --chmod=0500 config/ /var/www/config/
 COPY --chown=www-data:www-data --chmod=0500 public_html/ /var/www/html/
