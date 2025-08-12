@@ -25,7 +25,7 @@ jobs:
           tools: composer:v2
 
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Build
         run: composer install
@@ -59,7 +59,7 @@ jobs:
             wp-cli.yml
       
       - name: Checkout secrets
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: gerwinjansen/muziekpraktijkvivo-website-secrets
           ref: ${{ vars.SECRETS_REPO_BRANCH }}
