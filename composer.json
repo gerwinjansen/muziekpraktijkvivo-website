@@ -22,7 +22,7 @@
     "oscarotero/env": "2.1.1",
     "roots/bedrock-autoloader": "1.0.4",
     "roots/wp-config": "1.0.0",
-    "roots/wordpress": "6.9",
+    "roots/wordpress": "6.9.1",
     "koodimonni-language/core-nl_nl": "6.9",
     "wpackagist-theme/neve": "4.2.2",
     "wpackagist-plugin/ga-google-analytics": "20251120",
