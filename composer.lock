@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61a51892b12d7619cb132f6e51fd8e5",
+    "content-hash": "f7c6494934dc1ba202389b6bbf3420da",
     "packages": [
         {
             "name": "composer/installers",
@@ -1050,15 +1050,15 @@
         },
         {
             "name": "wpackagist-plugin/ga-google-analytics",
-            "version": "20251120",
+            "version": "20260209",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/ga-google-analytics/",
-                "reference": "tags/20251120"
+                "reference": "tags/20260209"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ga-google-analytics.20251120.zip"
+                "url": "https://downloads.wordpress.org/plugin/ga-google-analytics.20260209.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
