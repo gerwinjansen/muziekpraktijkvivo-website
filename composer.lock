@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8698ca287344e5cfa3ca54ddf09bbc67",
+    "content-hash": "b4bae40e3c9dfe3277c77bcab765b352",
     "packages": [
         {
             "name": "composer/installers",
@@ -1104,15 +1104,15 @@
         },
         {
             "name": "wpackagist-plugin/wpforms-lite",
-            "version": "1.9.9.3",
+            "version": "1.9.9.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wpforms-lite/",
-                "reference": "tags/1.9.9.3"
+                "reference": "tags/1.9.9.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.1.9.9.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.1.9.9.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
