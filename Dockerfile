@@ -1,4 +1,4 @@
-FROM wordpress:php8.5-apache AS wordpress-stripped
+FROM wordpress:php8.4-apache AS wordpress-stripped
 
 RUN set -eux; \
     rm -Rf \
