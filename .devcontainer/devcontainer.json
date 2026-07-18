@@ -11,10 +11,10 @@
     "features": {
         "./php-xdebug": {
             //See https://xdebug.org/docs/compat and https://xdebug.org/updates
-            "version": "3.4.2"
+            "version": "3.5.3"
         },
-        "ghcr.io/devcontainers-contrib/features/composer:1": {
-            "version": "2.8.9"
+        "ghcr.io/devcontainers-extra/features/composer:1": {
+            "version": "2.10.2"
         },
         "./mariadb-client-setup": {
             //Same values as in docker-compose.yaml

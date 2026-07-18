@@ -8,7 +8,7 @@ Plugin Name: Replace Fragment
 Plugin URI: http://localhost
 Description: Replaces [[titelkey]] en [[youtubekey]] based on ?fragment=XXX
 Author: Gerwin Jansen
-Version: 1.1
+Version: 1.2
 Author URI: http://localhost
 */
 add_filter( 'the_content', 'replaceFragment', 2 );
@@ -20,7 +20,10 @@ function replaceFragment($content)
 		
 		$firstPathElementName = explode('/', $_SERVER['REQUEST_URI'])[1];
 		
-		$fragmenten = array_map('str_getcsv', file(dirname(__FILE__)."/$firstPathElementName.csv"));
+		$fragmenten = 	array_map(
+							fn($line) => str_getcsv($line, ',', '"', ''),
+							file(dirname(__FILE__)."/$firstPathElementName.csv")
+						);
 		$titel = $fragmenten[$nummer][0];
 		$youtube = $fragmenten[$nummer][1];
 	
