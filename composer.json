@@ -5,11 +5,13 @@
   "license": "proprietary",
   "repositories": [
     {
+      "name": "wp-packages",
       "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+      "url": "https://repo.wp-packages.org",
+      "only": ["wp-plugin/*", "wp-theme/*"]
     },
     {
+      "name": "wp-languages",
       "type": "composer",
       "url": "https://wp-languages.github.io",
       "only": ["koodimonni-language/*", "koodimonni-plugin-language/*", "koodimonni-theme-language/*"]
@@ -24,11 +26,11 @@
     "roots/wp-config": "1.0.0",
     "roots/wordpress": "7.0.2",
     "koodimonni-language/core-nl_nl": "7.0.2",
-    "wpackagist-theme/neve": "4.2.8",
-    "wpackagist-plugin/ga-google-analytics": "20260421",
-    "wpackagist-plugin/otter-blocks": "3.2.0",
-    "wpackagist-plugin/wp-youtube-lyte": "1.7.30",
-    "wpackagist-plugin/wpforms-lite": "2.0.0.2"
+    "wp-theme/neve": "4.2.8",
+    "wp-plugin/ga-google-analytics": "20260421",
+    "wp-plugin/otter-blocks": "3.2.0",
+    "wp-plugin/wp-youtube-lyte": "1.7.30",
+    "wp-plugin/wpforms-lite": "2.0.0.2"
   },
   "config": {
     "optimize-autoloader": true,

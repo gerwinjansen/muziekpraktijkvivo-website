@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e37d2ec96e1f5142a4e89ef79b161d3",
+    "content-hash": "1f7658bce115d66d4de3f3e55cef26c5",
     "packages": [
         {
             "name": "composer/installers",
@@ -1050,7 +1050,7 @@
             "time": "2026-07-06T19:11:50+00:00"
         },
         {
-            "name": "wpackagist-plugin/ga-google-analytics",
+            "name": "wp-plugin/ga-google-analytics",
             "version": "20260421",
             "source": {
                 "type": "svn",
@@ -1062,13 +1062,26 @@
                 "url": "https://downloads.wordpress.org/plugin/ga-google-analytics.20260421.zip"
             },
             "require": {
-                "composer/installers": "^1.0 || ^2.0"
+                "composer/installers": "~1.0|~2.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/ga-google-analytics/"
+            "notification-url": "https://wp-packages.org/downloads",
+            "authors": [
+                {
+                    "name": "Jeff Starr"
+                }
+            ],
+            "description": "Adds Google Analytics tracking code to your WordPress site. Supports many tracking features.",
+            "homepage": "https://perishablepress.com/google-analytics-plugin/",
+            "support": {
+                "changelog": "https://wordpress.org/plugins/ga-google-analytics/#developers",
+                "issues": "https://wordpress.org/support/plugin/ga-google-analytics",
+                "source": "https://plugins.svn.wordpress.org/ga-google-analytics"
+            },
+            "time": "2026-04-21T18:31:36+00:00"
         },
         {
-            "name": "wpackagist-plugin/otter-blocks",
+            "name": "wp-plugin/otter-blocks",
             "version": "3.2.0",
             "source": {
                 "type": "svn",
@@ -1080,13 +1093,26 @@
                 "url": "https://downloads.wordpress.org/plugin/otter-blocks.3.2.0.zip"
             },
             "require": {
-                "composer/installers": "^1.0 || ^2.0"
+                "composer/installers": "~1.0|~2.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/otter-blocks/"
+            "notification-url": "https://wp-packages.org/downloads",
+            "authors": [
+                {
+                    "name": "Themeisle"
+                }
+            ],
+            "description": "Quickly create WordPress pages with 20+ blocks, 100+ ready-to-import designs, and advanced editor extensions. It’s website building, Lego-style!",
+            "homepage": "https://themeisle.com/plugins/otter-blocks",
+            "support": {
+                "changelog": "https://wordpress.org/plugins/otter-blocks/#developers",
+                "issues": "https://wordpress.org/support/plugin/otter-blocks",
+                "source": "https://plugins.svn.wordpress.org/otter-blocks"
+            },
+            "time": "2026-07-13T15:51:01+00:00"
         },
         {
-            "name": "wpackagist-plugin/wp-youtube-lyte",
+            "name": "wp-plugin/wp-youtube-lyte",
             "version": "1.7.30",
             "source": {
                 "type": "svn",
@@ -1098,13 +1124,26 @@
                 "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.30.zip"
             },
             "require": {
-                "composer/installers": "^1.0 || ^2.0"
+                "composer/installers": "~1.0|~2.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-youtube-lyte/"
+            "notification-url": "https://wp-packages.org/downloads",
+            "authors": [
+                {
+                    "name": "Frank Goossens"
+                }
+            ],
+            "description": "High performance YouTube video, playlist and audio-only embeds which don't slow down your blog and offer optimal accessibility.",
+            "homepage": "http://blog.futtta.be/wp-youtube-lyte/",
+            "support": {
+                "changelog": "https://wordpress.org/plugins/wp-youtube-lyte/#developers",
+                "issues": "https://wordpress.org/support/plugin/wp-youtube-lyte",
+                "source": "https://plugins.svn.wordpress.org/wp-youtube-lyte"
+            },
+            "time": "2026-03-23T19:23:21+00:00"
         },
         {
-            "name": "wpackagist-plugin/wpforms-lite",
+            "name": "wp-plugin/wpforms-lite",
             "version": "2.0.0.2",
             "source": {
                 "type": "svn",
@@ -1116,13 +1155,26 @@
                 "url": "https://downloads.wordpress.org/plugin/wpforms-lite.2.0.0.2.zip"
             },
             "require": {
-                "composer/installers": "^1.0 || ^2.0"
+                "composer/installers": "~1.0|~2.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wpforms-lite/"
+            "notification-url": "https://wp-packages.org/downloads",
+            "authors": [
+                {
+                    "name": "Syed Balkhi"
+                }
+            ],
+            "description": "The best WordPress contact form plugin. Drag & Drop form builder to create beautiful contact forms, payment forms, & other custom forms.",
+            "homepage": "https://wpforms.com",
+            "support": {
+                "changelog": "https://wordpress.org/plugins/wpforms-lite/#developers",
+                "issues": "https://wordpress.org/support/plugin/wpforms-lite",
+                "source": "https://plugins.svn.wordpress.org/wpforms-lite"
+            },
+            "time": "2026-07-16T20:35:50+00:00"
         },
         {
-            "name": "wpackagist-theme/neve",
+            "name": "wp-theme/neve",
             "version": "4.2.8",
             "source": {
                 "type": "svn",
@@ -1134,10 +1186,18 @@
                 "url": "https://downloads.wordpress.org/theme/neve.4.2.8.zip"
             },
             "require": {
-                "composer/installers": "^1.0 || ^2.0"
+                "composer/installers": "~1.0|~2.0"
             },
             "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/neve/"
+            "notification-url": "https://wp-packages.org/downloads",
+            "description": "Neve is a next-generation, ultra-fast WordPress theme designed for top performance, SEO, and Core Web Vitals. Its lightweight codebase and small size ensure minimal overhead and lightning-fast load times. Fully compatible with the block editor, popular page builders (Elementor, Bricks, Oxygen etc), and WooCommerce, it’s perfect for blogs, small businesses, agencies, portfolios, and online stores. With responsive design, multilingual translations, and easy customization options, Neve empowers you to create a future-proof, high-ranking online presence. Discover everything Neve has to offer and explore our powerful premium version at https://themeisle.com/themes/neve/.",
+            "homepage": "https://wordpress.org/themes/neve/",
+            "support": {
+                "changelog": "https://wordpress.org/themes/neve/#developers",
+                "issues": "https://wordpress.org/support/theme/neve",
+                "source": "https://themes.svn.wordpress.org/neve"
+            },
+            "time": "2026-07-09T00:00:00+00:00"
         }
     ],
     "packages-dev": [],
