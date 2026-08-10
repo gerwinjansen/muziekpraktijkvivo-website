@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "497f19226cfbd3b16616f59d26a2e797",
+    "content-hash": "1d848520a17ef7c2bf2dc9df6e3bd714",
     "packages": [
         {
             "name": "composer/installers",
@@ -1113,15 +1113,15 @@
         },
         {
             "name": "wp-plugin/wp-youtube-lyte",
-            "version": "1.7.31",
+            "version": "1.7.32",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-youtube-lyte/",
-                "reference": "tags/1.7.31"
+                "reference": "tags/1.7.32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.31.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.32.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
@@ -1140,7 +1140,7 @@
                 "issues": "https://wordpress.org/support/plugin/wp-youtube-lyte",
                 "source": "https://plugins.svn.wordpress.org/wp-youtube-lyte"
             },
-            "time": "2026-08-04T19:21:05+00:00"
+            "time": "2026-08-07T19:26:16+00:00"
         },
         {
             "name": "wp-plugin/wpforms-lite",
