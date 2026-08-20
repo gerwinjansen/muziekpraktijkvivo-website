@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e43fbc6d96900dd4ec5bcaf36e78dbc",
+    "content-hash": "51981ed5e7f73ea31275298798b94da7",
     "packages": [
         {
             "name": "composer/installers",
@@ -1082,15 +1082,15 @@
         },
         {
             "name": "wp-plugin/otter-blocks",
-            "version": "3.2.2",
+            "version": "3.2.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/otter-blocks/",
-                "reference": "tags/3.2.2"
+                "reference": "tags/3.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/otter-blocks.3.2.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/otter-blocks.3.2.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
@@ -1109,7 +1109,7 @@
                 "issues": "https://wordpress.org/support/plugin/otter-blocks",
                 "source": "https://plugins.svn.wordpress.org/otter-blocks"
             },
-            "time": "2026-08-12T12:56:51+00:00"
+            "time": "2026-08-20T11:46:43+00:00"
         },
         {
             "name": "wp-plugin/wp-youtube-lyte",
