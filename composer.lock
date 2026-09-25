@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24db6ce5e3406ec547348d4113629fca",
+    "content-hash": "28d02859a5f84dd6372864fdbb90e003",
     "packages": [
         {
             "name": "composer/installers",
@@ -216,10 +216,10 @@
         },
         {
             "name": "koodimonni-language/core-nl_nl",
-            "version": "7.0.4",
+            "version": "7.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/core/7.0.4/nl_NL.zip"
+                "url": "https://downloads.wordpress.org/translation/core/7.1.2/nl_NL.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -488,7 +488,7 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "7.0.4",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/wordpress.git",
@@ -519,7 +519,7 @@
             ],
             "support": {
                 "issues": "https://github.com/roots/wordpress/issues",
-                "source": "https://github.com/roots/wordpress/tree/7.0.4"
+                "source": "https://github.com/roots/wordpress/tree/7.1.2"
             },
             "funding": [
                 {
@@ -598,23 +598,23 @@
         },
         {
             "name": "roots/wordpress-no-content",
-            "version": "7.0.4",
+            "version": "7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "7.0.4"
+                "reference": "7.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.w.org/release/wordpress-7.0.4-no-content.zip",
-                "reference": "7.0.4",
-                "shasum": "c43ba63174abfef77d00fbc6041db0d801869e09"
+                "url": "https://downloads.wordpress.org/release/wordpress-7.1.2-no-content.zip",
+                "reference": "7.1.2",
+                "shasum": "52c0250854a52621dc024651b63d1e088287ee16"
             },
             "require": {
                 "php": ">= 7.4"
             },
             "provide": {
-                "wordpress/core-implementation": "7.0.4"
+                "wordpress/core-implementation": "7.1.2"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -665,7 +665,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-08-12T14:47:33+00:00"
+            "time": "2026-09-22T13:36:10+00:00"
         },
         {
             "name": "roots/wp-config",
