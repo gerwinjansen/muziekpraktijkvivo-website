@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12e2d4ae2d06b46b21e7942030d3e32b",
+    "content-hash": "38bf228bbf5a50d60177b24292e09f52",
     "packages": [
         {
             "name": "composer/installers",
@@ -1051,15 +1051,15 @@
         },
         {
             "name": "wp-plugin/ga-google-analytics",
-            "version": "20261108",
+            "version": "20261112",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/ga-google-analytics/",
-                "reference": "tags/20261108"
+                "reference": "tags/20261112"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ga-google-analytics.20261108.zip"
+                "url": "https://downloads.wordpress.org/plugin/ga-google-analytics.20261112.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
@@ -1078,7 +1078,7 @@
                 "issues": "https://wordpress.org/support/plugin/ga-google-analytics",
                 "source": "https://plugins.svn.wordpress.org/ga-google-analytics"
             },
-            "time": "2026-11-08T17:26:37+00:00"
+            "time": "2026-11-12T18:50:01+00:00"
         },
         {
             "name": "wp-plugin/otter-blocks",
