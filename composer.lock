@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2ccd68bc7fc089eec76bd4d4bf86890",
+    "content-hash": "59500bcad236422d77a10b0df37b39ca",
     "packages": [
         {
             "name": "composer/installers",
@@ -1144,15 +1144,15 @@
         },
         {
             "name": "wp-plugin/wpforms-lite",
-            "version": "2.0.4",
+            "version": "2.0.5.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wpforms-lite/",
-                "reference": "tags/2.0.4"
+                "reference": "tags/2.0.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.2.0.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.2.0.5.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0|~2.0"
@@ -1171,7 +1171,7 @@
                 "issues": "https://wordpress.org/support/plugin/wpforms-lite",
                 "source": "https://plugins.svn.wordpress.org/wpforms-lite"
             },
-            "time": "2026-11-05T12:12:06+00:00"
+            "time": "2026-11-19T12:31:25+00:00"
         },
         {
             "name": "wp-theme/neve",
