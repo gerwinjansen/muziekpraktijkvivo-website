@@ -30,7 +30,7 @@
     "wp-plugin/ga-google-analytics": "20261112",
     "wp-plugin/otter-blocks": "3.2.12",
     "wp-plugin/wp-youtube-lyte": "1.7.32",
-    "wp-plugin/wpforms-lite": "2.0.4"
+    "wp-plugin/wpforms-lite": "2.0.5.1"
   },
   "config": {
     "optimize-autoloader": true,
